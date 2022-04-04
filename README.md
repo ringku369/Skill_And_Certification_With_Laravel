@@ -31,14 +31,25 @@ composer install
 
 ```shell
 php artisan key:generate
-php artisan storage:link 
 ```
 
-##### run migration and seeder
+```shell
+php artisan storage:link
+```
+
+##### run migration and seeder also to clear cache
 
 ```shell
 php artisan migrate:fresh --seed
+```
+
+```shell
 php artisan db:seed --class=TablePermissionKeySeeder
+```
+##### to clear all type cache
+
+```shell
+php artisan optimize:clear
 ```
 
 ## Usage
